@@ -81,7 +81,7 @@ public class SnakeGame {
         scanner.close();
     }
 
-    private void move() {
+    void move() {
         Point head = snake.getFirst();
         Point newHead;
 
@@ -108,7 +108,7 @@ public class SnakeGame {
         }
     }
 
-    private boolean isGameOver() {
+    boolean isGameOver() {
         Point head = snake.getFirst();
         // Check for collision with the snake's body
         for (Point bodyPart : snake.subList(1, snake.size())) {
