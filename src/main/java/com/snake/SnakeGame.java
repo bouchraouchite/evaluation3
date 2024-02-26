@@ -60,11 +60,11 @@ public class SnakeGame {
 
         while (true) {
             printGameBoard();
-            System.out.print("Enter a direction (W/A/S/D): ");
+            System.out.print("Enter a direction (i/j/k/l): ");
             char input = scanner.next().charAt(0);
             updateDirection(input);
 
-            move();
+            // move();
             if (isGameOver()) {
                 System.out.println("Game Over!");
                 break;
@@ -147,23 +147,27 @@ public class SnakeGame {
 
     private void updateDirection(char input) {
         switch (input) {
-            case 'W':
-            case 'w':
+            case 'i':
                 direction = Direction.UP;
+                move();
                 break;
-            case 'S':
-            case 's':
+
+            case 'k':
                 direction = Direction.DOWN;
+                move();
                 break;
-            case 'A':
-            case 'a':
+
+            case 'j':
                 direction = Direction.LEFT;
+                move();
                 break;
-            case 'D':
-            case 'd':
+            case 'l':
+
                 direction = Direction.RIGHT;
+                move();
                 break;
             default:
+                break;
 
         }
     }
